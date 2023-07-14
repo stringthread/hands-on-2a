@@ -22,6 +22,7 @@ export default function AddModal({ isOpen, onClose, addTask }: Props) {
   const onSubmit = handleSubmit(
     ({ name }) => {
       addTask(name);
+      onClose();
     },
     (err) => {
       console.error(err);
